@@ -1,0 +1,30 @@
+from PIL import Image
+from PIL import ImageDraw
+
+import math
+
+width = 800
+height = 800
+
+spacing = 1 # the degrees between each intial point
+
+numOfFrames = int(360/spacing)
+
+radius = .9
+
+iterations = 10;
+
+strokeWidth = 1;
+
+pList = []
+
+def getPoint(degree):
+    degree = degree*(math.pi/180)
+    return [(math.sin(degree)*radius, math.cos(degree)*radius)]
+   
+
+
+#for x in range(0, numOfFrames):
+
+print(getPoint(180))
+
